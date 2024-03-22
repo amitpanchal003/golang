@@ -1,0 +1,1 @@
+hello this is day one of goLang Series.
