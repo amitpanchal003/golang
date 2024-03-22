@@ -37,4 +37,14 @@ func main() { // This is main method{function} this is main entry point of progr
 08. the zero value for int is 0(int=0)
 	for string ("").
 	for boolean (false)
+	Short hand variable declaration and assignment.
+	:= is used to declare variable,
+	when we use this short hand we dont need to specify the type of variable.
+	it automatically detect the type based of assigned value.
+	i.e.
+	age:= 12  // this is int type
+	name:= "amit" // this is string type.
+
+	this type of declared variable are not accessable outside the function.
+	we can not declare constant(const) type value.
 */
