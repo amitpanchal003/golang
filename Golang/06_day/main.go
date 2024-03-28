@@ -53,6 +53,14 @@ func main() {
 	//thsi will work smoothly.
 	// bcoz, when we use append method it will re-allocate the memory and store the values
 	// this is special part in golang slices
-	fmt.Print("size of highScore is : ", len(highScore)) // size is 7
+	//fmt.Print("size of highScore is : ", len(highScore)) // size is 7
 	// it automatically increase the size of slices according to the list values.
+
+	//how to remove value from slices based on index
+	var courses = []string{"javascript", "python", "ruby", "swift", "reactjs"}
+	fmt.Println(courses)
+	var index int = 2
+	courses = append(courses[:index], courses[index+1:]...) // we can also use append to remove value in slices
+	fmt.Println(courses)
+
 }
