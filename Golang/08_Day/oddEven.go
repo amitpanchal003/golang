@@ -16,8 +16,8 @@ func main() {
 
 }
 */
-// using bufi package solution
-
+// using bufio package solution
+/*
 package main
 
 import (
@@ -56,3 +56,65 @@ func main() {
 		fmt.Println("number is odd")
 	}
 }
+*/
+
+// 02. Write a program that takes two numbers as input
+// and prints the larger of the two numbers.
+/*package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+
+	//creating scanner
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Println("enter first number: ")
+	num, err := reader.ReadString('\n')
+
+	num2, err := reader.ReadString('\n')
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	number, err := strconv.ParseFloat(strings.TrimSpace(num), 64)
+	number2, err := strconv.ParseFloat(strings.TrimSpace(num2), 64)
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	if number > number2 {
+		fmt.Println("larger number is: ", number)
+	} else if number < number2 {
+		fmt.Println("larger number is: ", number2)
+	}
+
+}*/
+
+/*
+Another simple way to do this
+package main
+
+import "fmt"
+func main(){
+	var num1,num2 int
+	fmt.println("enter first number: ")
+	fmt.Scanln(&num1)
+	fmt.println("enter second number: ")
+	fmt.Scanln(&num2)
+	if num>num2{
+		"first is largest"
+		else
+		second is largest
+	}
+}
+*/
