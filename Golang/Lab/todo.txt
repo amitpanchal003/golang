@@ -1,0 +1,26 @@
+01.Write a program that takes three numbers as input 
+    and prints the smallest of the three numbers.
+
+02.Write a program that takes a number as input
+     and prints whether it is prime or not.
+
+03.Write a program that takes a number as input 
+    and prints all the prime numbers up to that number.
+
+04.Write a program that takes a number as input 
+    and prints the factorial of that number.
+
+05.Write a program that takes a string as input 
+    and prints whether it is a palindrome or not.
+
+06.Write a program that takes a string as input 
+    and prints whether it is an anagram of another string.
+
+07.Write a program that takes a string as input 
+    and prints all the unique characters in the string.
+
+08.Write a program that takes a string as input 
+    and prints all the permutations of that string.
+    
+09.Write a program that takes a string as input 
+    and prints all the combinations of that string.
