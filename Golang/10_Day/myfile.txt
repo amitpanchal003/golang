@@ -1,0 +1,1 @@
+this demo for writing files in golang

@@ -1,10 +1,15 @@
-//Defer in golang
-
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io"
+	"os"
+)
 
+// solve this errors
 func main() {
+	Files()
+
 	defer fmt.Println("three")
 	defer fmt.Println("two")
 	defer fmt.Println("ONE")
@@ -17,5 +22,27 @@ func main() {
 	//but the function call is not executed until the surrounding function returns.
 
 	// in simple term , it work like LIFO
+
+}
+
+func Files() {
+	content := "this demo for writing files in golang"
+
+	file, err := os.Create("./myfile.txt")
+	// while creating file there might be errors, we have to handle this
+
+	if err != nil {
+		panic(err) // panic will just shuttdown the execution of program and return the err
+
+	}
+	length, err := io.WriteString(file, content)
+	// using io package, pushing content into file
+
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("length is: ", length)
+	defer file.Close()
+	// why defer, bcoz we want close file after everything is done
 
 }
