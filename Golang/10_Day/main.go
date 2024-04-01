@@ -45,4 +45,16 @@ func Files() {
 	defer file.Close()
 	// why defer, bcoz we want close file after everything is done
 
+	readFile("./myfile.txt")
+
+}
+
+func readFile(filename string) {
+	//for reading the file there is seperate package which is [ioutil]
+
+	dataByte, err := os.ReadFile(filename)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("text data inside the file is: \n", string(dataByte))
 }
