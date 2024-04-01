@@ -31,16 +31,18 @@ func Files() {
 	file, err := os.Create("./myfile.txt")
 	// while creating file there might be errors, we have to handle this
 
-	if err != nil {
-		panic(err) // panic will just shuttdown the execution of program and return the err
+	// if err != nil {
+	// 	panic(err) // panic will just shuttdown the execution of program and return the err
 
-	}
+	// }
+	checkNilErr(err)
 	length, err := io.WriteString(file, content)
 	// using io package, pushing content into file
 
-	if err != nil {
-		panic(err)
-	}
+	// if err != nil {
+	// 	panic(err)
+	// }
+	checkNilErr(err)
 	fmt.Println("length is: ", length)
 	defer file.Close()
 	// why defer, bcoz we want close file after everything is done
@@ -53,8 +55,17 @@ func readFile(filename string) {
 	//for reading the file there is seperate package which is [ioutil]
 
 	dataByte, err := os.ReadFile(filename)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	checkNilErr(err)
+	fmt.Println("text data inside the file is: \n", string(dataByte))
+}
+
+//short hand for checking error
+
+func checkNilErr(err error) {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("text data inside the file is: \n", string(dataByte))
 }
