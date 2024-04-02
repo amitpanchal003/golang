@@ -106,4 +106,5 @@ func main() { // Array
 	// Map
 	var data1 map[string]int = map[string]int{"age": 28, "size": 180}
 	fmt.Println(data1)
+	fmt.Println("showing demo , how add, commit , push work")
 }
