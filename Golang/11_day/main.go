@@ -14,10 +14,16 @@ type Author struct {
 	Website  string `json:"website"`
 }
 
+//Case ID: 171222257800802
+
 //fake database
 
 var courses []Course
 
+//middleware or helper file -- this goes in seprate file
+func (c *Course) IsEmpty() bool {
+
+}
 func main() {
 
 }
